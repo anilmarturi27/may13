@@ -41,7 +41,7 @@ public class TestCases extends Box {
 //		Switching to signin window
 		wh.switchTo("sign in");
 		
-		//vrgergergerherheherh
+		//vrgergergerherheherhfwefwfwef
 //		loging in using the credentials
 		sn.GoogleLogin(GoogleEmail,TrustedMail);
 //		
