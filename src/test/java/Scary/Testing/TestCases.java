@@ -1,5 +1,7 @@
 package Scary.Testing;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -77,7 +79,7 @@ public class TestCases extends Box {
 		boolean switched = wh.switchTo(DocumentName);
 		Assert.assertTrue(switched);
 	}
-//	
+////	
 	@Test(priority=3,dependsOnMethods="Createdoc")
 	public void MakeACopy() throws InterruptedException {
 		DocumentHomePage dhm = new DocumentHomePage(driver);
@@ -105,7 +107,7 @@ public class TestCases extends Box {
 		boolean switchedd = wh.switchTo(DocumentName);
 		Assert.assertTrue(switchedd);
 	}
-//		
+////		
 	@Test(priority=4,dependsOnMethods="Createdoc")
 	public void TextEntering() throws InterruptedException {
 		DocumentHomePage dhm = new DocumentHomePage(driver);
@@ -169,13 +171,25 @@ public class TestCases extends Box {
 	}
 	
 	@Test(priority=9)
-	public void SuggestionMode() {
+	public void SuggestionMode() throws InterruptedException {
 		DocumentHomePage dhm = new DocumentHomePage(driver);
 		
 		// Select any One : Editing ,Suggesting, Viewing 
 		dhm.SwitchToMode("Suggesting");
-		Actions action = new Actions(driver);
-		action.sendKeys("hello google this is suggestions").build().perform();
+		
+		dhm.EnterText("This is automated suggestion");
+		boolean Checked = dhm.DocumentCheck();
+		Assert.assertTrue(Checked);
+		
+		driver.switchTo().defaultContent();
+		dhm.SwitchToMode("Editing");
 	}
 	
+	@Test(priority=10)
+	public void InsertImage() throws InterruptedException, IOException {
+		String ExeFilePath = "\"C:\\Users\\testa\\OneDrive\\Documents\\MyHub\\may13\\Image_insertion.exe\"";
+		DocumentHomePage dhm = new DocumentHomePage(driver);
+		dhm.ImageInsertion(ExeFilePath);
+		
+	}
 }

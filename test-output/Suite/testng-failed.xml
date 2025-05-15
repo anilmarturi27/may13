@@ -5,8 +5,8 @@
     <classes>
       <class name="Scary.Testing.TestCases">
         <methods>
-          <include name="SuggestionMode"/>
           <include name="SignIn"/>
+          <include name="InsertImage"/>
         </methods>
       </class> <!-- Scary.Testing.TestCases -->
     </classes>

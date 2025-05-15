@@ -1,5 +1,6 @@
 package Pages;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -60,8 +61,7 @@ public class DocumentHomePage extends BasePage {
 	By SpChar2 = By.xpath("//div[contains(text(),'↑')]");
 	By SpChar3 = By.xpath("//div[contains(text(),'→')]");
 	By SpCharCancel = By.xpath("//div[@class='modal-dialog ita-cp-whole-pad']//span[@class='modal-dialog-title-close']");
-	
-	
+	By ImageXpath = By.xpath("//*[@id=\":7n\"]");
 	
 	public DocumentHomePage(WebDriver driver) {
 		super(driver);
@@ -286,19 +286,9 @@ public class DocumentHomePage extends BasePage {
 		}else {
 			System.out.println("Mode not found");
 		}
+		driver.switchTo().defaultContent();
 		
 	}
-	
-	
-	
-	
-//	<dependency>
-//    <groupId>junit</groupId>
-//    <artifactId>junit</artifactId>
-//    <version>3.8.1</version>
-//    <scope>test</scope>
-//  </dependency>
-	
 	
 	
 	public void ResolveComment(String text) {
@@ -369,6 +359,22 @@ public class DocumentHomePage extends BasePage {
 		driver.switchTo().defaultContent();	
 	}
 	
-	
+	@SuppressWarnings("deprecation")
+	public void ImageInsertion(String ExeFilePath) throws InterruptedException, IOException {
+		SwitchToIframe(DocumentBodyFrame);
+		click(InsertMenu);
+		Thread.sleep(2000);
+		WebElement element = WaitForElement(ImageXpath);
+		Actions action = new Actions(driver);
+		action.moveToElement(element).build().perform();
+		Thread.sleep(2000);
+		action.moveByOffset(200,15).build().perform();
+		action.moveByOffset(0,50).click().build().perform();
+		Thread.sleep(3000);
+		Runtime.getRuntime().exec(ExeFilePath);
+		
+
+		
+	}
 	
 }
