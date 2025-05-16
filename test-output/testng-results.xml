@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-15T15:02:36 IST" name="Default suite" finished-at="2025-05-15T15:05:45 IST" duration-ms="188735">
+  <suite started-at="2025-05-16T14:43:19 IST" name="Default suite" finished-at="2025-05-16T14:44:13 IST" duration-ms="53658">
     <groups>
     </groups>
-    <test started-at="2025-05-15T15:02:36 IST" name="Default test" finished-at="2025-05-15T15:05:45 IST" duration-ms="188735">
+    <test started-at="2025-05-16T14:43:19 IST" name="Default test" finished-at="2025-05-16T14:44:13 IST" duration-ms="53658">
       <class name="Scary.Testing.TestCases">
-        <test-method is-config="true" signature="SignIn()[pri:0, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:02:27 IST" name="SignIn" finished-at="2025-05-15T15:02:36 IST" duration-ms="9039" status="PASS">
+        <test-method is-config="true" signature="SignIn()[pri:0, instance:Scary.Testing.TestCases@a43ce46]" started-at="2025-05-16T14:43:12 IST" name="SignIn" finished-at="2025-05-16T14:43:19 IST" duration-ms="7479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignIn -->
-        <test-method signature="Createdoc()[pri:1, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:02:36 IST" name="Createdoc" finished-at="2025-05-15T15:03:42 IST" duration-ms="65581" status="PASS">
+        <test-method signature="Createdoc()[pri:1, instance:Scary.Testing.TestCases@a43ce46]" started-at="2025-05-16T14:43:19 IST" name="Createdoc" finished-at="2025-05-16T14:44:01 IST" duration-ms="41661" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Createdoc -->
-        <test-method signature="CreateDocFromFile()[pri:2, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:03:42 IST" name="CreateDocFromFile" finished-at="2025-05-15T15:04:04 IST" depends-on-methods="Scary.Testing.TestCases.Createdoc" duration-ms="22081" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateDocFromFile -->
-        <test-method signature="MakeACopy()[pri:3, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:04:04 IST" name="MakeACopy" finished-at="2025-05-15T15:04:18 IST" depends-on-methods="Scary.Testing.TestCases.Createdoc" duration-ms="13911" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MakeACopy -->
-        <test-method signature="TextEntering()[pri:4, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:04:18 IST" name="TextEntering" finished-at="2025-05-15T15:04:19 IST" depends-on-methods="Scary.Testing.TestCases.Createdoc" duration-ms="1065" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TextEntering -->
-        <test-method signature="InsertDrawing()[pri:5, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:04:19 IST" name="InsertDrawing" finished-at="2025-05-15T15:04:44 IST" depends-on-methods="Scary.Testing.TestCases.Createdoc" duration-ms="24897" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InsertDrawing -->
-        <test-method signature="comment()[pri:6, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:04:44 IST" name="comment" finished-at="2025-05-15T15:05:05 IST" duration-ms="21126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- comment -->
-        <test-method signature="InsertHorizontalLine()[pri:7, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:05:05 IST" name="InsertHorizontalLine" finished-at="2025-05-15T15:05:13 IST" duration-ms="7726" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InsertHorizontalLine -->
-        <test-method signature="InsertSpecialCharacter()[pri:8, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:05:13 IST" name="InsertSpecialCharacter" finished-at="2025-05-15T15:05:30 IST" duration-ms="16497" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InsertSpecialCharacter -->
-        <test-method signature="SuggestionMode()[pri:9, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:05:30 IST" name="SuggestionMode" finished-at="2025-05-15T15:05:37 IST" duration-ms="7364" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SuggestionMode -->
-        <test-method signature="InsertImage()[pri:10, instance:Scary.Testing.TestCases@616fe72b]" started-at="2025-05-15T15:05:37 IST" name="InsertImage" finished-at="2025-05-15T15:05:45 IST" duration-ms="8118" status="PASS">
+        <test-method signature="InsertImage()[pri:2, instance:Scary.Testing.TestCases@a43ce46]" started-at="2025-05-16T14:44:01 IST" name="InsertImage" finished-at="2025-05-16T14:44:13 IST" duration-ms="11842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InsertImage -->

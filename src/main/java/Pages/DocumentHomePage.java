@@ -1,5 +1,6 @@
 package Pages;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,9 +12,12 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 
 import Scary.Testing.BasePage;
@@ -66,6 +70,7 @@ public class DocumentHomePage extends BasePage {
 	public DocumentHomePage(WebDriver driver) {
 		super(driver);
 	}
+	
 	
 	public boolean DocFromFileMenu() throws InterruptedException {
 		SwitchToIframe(DocumentBodyFrame);
@@ -370,11 +375,23 @@ public class DocumentHomePage extends BasePage {
 		Thread.sleep(2000);
 		action.moveByOffset(200,15).build().perform();
 		action.moveByOffset(0,50).click().build().perform();
-		Thread.sleep(3000);
-		Runtime.getRuntime().exec(ExeFilePath);
+		Thread.sleep(2000);
+		try {
+			Runtime.getRuntime().exec(ExeFilePath);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		
-
-		
+//		Thread.sleep(3000);
+//		driver.switchTo().defaultContent();
+	}
+	
+	public void TakeScreenshot(WebDriver driver) throws IOException {
+		this.driver=driver;
+		TakesScreenshot sc = (TakesScreenshot)driver;
+		File src = sc.getScreenshotAs(OutputType.FILE);
+		File dest = new File("./Screenshots/Image1.png" );
+		FileHandler.copy(src, dest);
 	}
 	
 }

@@ -34,6 +34,8 @@ import SetChromeProfile.SetChrome;
 public class Box {
 	
 	
+	
+	
 	WebDriver driver = new ChromeDriver();
 		
 	Random random = new Random();

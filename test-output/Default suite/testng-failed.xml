@@ -5,8 +5,14 @@
     <classes>
       <class name="Scary.Testing.TestCases">
         <methods>
+          <include name="SuggestionMode"/>
+          <include name="InsertHorizontalLine"/>
+          <include name="InsertSpecialCharacter"/>
+          <include name="InsertDrawing"/>
           <include name="SignIn"/>
+          <include name="Createdoc"/>
           <include name="InsertImage"/>
+          <include name="comment"/>
         </methods>
       </class> <!-- Scary.Testing.TestCases -->
     </classes>
