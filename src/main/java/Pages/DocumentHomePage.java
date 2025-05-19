@@ -386,11 +386,10 @@ public class DocumentHomePage extends BasePage {
 //		driver.switchTo().defaultContent();
 	}
 	
-	public void TakeScreenshot(WebDriver driver) throws IOException {
-		this.driver=driver;
+	public void TakeScreenshot(String name) throws IOException {
 		TakesScreenshot sc = (TakesScreenshot)driver;
 		File src = sc.getScreenshotAs(OutputType.FILE);
-		File dest = new File("./Screenshots/Image1.png" );
+		File dest = new File("./Screenshots/"+name+".png" );
 		FileHandler.copy(src, dest);
 	}
 	

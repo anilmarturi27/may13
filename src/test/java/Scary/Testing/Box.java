@@ -43,7 +43,7 @@ public class Box {
 	String GoogleEmail = "user1@boxengsandbox.com";
 	String TrustedMail = "marturi@google.com";
 	
-	@BeforeSuite
+	@BeforeSuite()
 	public void SignIn(){
 //		WebDriver driver = new ChromeDriver();
 		driver.get("https://boxfordocs.app.box.com/folder/0");
@@ -52,6 +52,7 @@ public class Box {
 		driver.manage().window().maximize();
 		Signin sn = new Signin(driver);
 		sn.login();
+		ScreenshotManager.Screenshots();
 
 	}
 	
